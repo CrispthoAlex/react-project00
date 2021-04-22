@@ -1,0 +1,22 @@
+{
+    "todos": [
+        {
+            "title":"Task 1",
+            "responsible": "Mark Twain",
+            "description": "Create Repository on GitHub",
+            "priority":"low"
+        },
+        {
+            "title":"Task 2",
+            "responsible": "Ceaser Palace",
+            "description": "Generate files of the structure",
+            "priority":"medium"
+        },
+        {
+            "title":"Task 3",
+            "responsible": "Carry Silvain",
+            "description": "Develop first app",
+            "priority":"high"
+        }
+    ]
+}

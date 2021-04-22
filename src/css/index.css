@@ -24,6 +24,15 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+/* Don't show link behavior*/
+a, a:link {
+  color: currentcolor;
+  text-decoration: none;
+}
+a:focus {
+  border: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
