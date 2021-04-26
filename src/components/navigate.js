@@ -5,7 +5,7 @@ function Navigate(props) {
 
         <nav className="navbar navbar-dark bg-white">
             <a href="#intro" className="navbar__item text-dark">
-                { props.bgtitle }
+                { props.item }
             </a>
         </nav>
 

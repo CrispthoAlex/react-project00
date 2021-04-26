@@ -1,47 +1,21 @@
-import React from 'react';
+import React, {Component} from 'react';
 // import logo fro m './logo.svg';
 import './css/App.css';
-import Navigate from './components/navigate';
 import  {todos}  from './todos.json';
+//import Navigate from './components/navigate';
+
 
 console.log(todos);
 
-class Helloworld extends React.Component {
-  
-  state = {
-    show: true,
-  }
-  toggleShow = () => this.setState( { show: !this.state.show } )
-
+class App extends Component {
+  state = { tasks: todos } // Tasks defined
   render() {
-    if (this.state.show){
-      return (
-        <div id="hello">
-          Testing:
-          <h3>{this.props.subtitle}</h3>
-          <h5>{this.props.text}</h5>
-          <button onClick= { this.toggleShow } >Toggle Show</button>
-        </div>
-      )
-    } else {
-      return <div>
-          <h2>There are not elements</h2>
-          <button onClick= { this.toggleShow } >Toggle Show</button>
-        </div>
-    }
-  }
-}
-
-
-function App() {
-  return (
-    <div className="App">
-      <Navigate bgtitle="Home"/>
-      <Helloworld text="Hello your name" subtitle="testing 1st subtitle"/>
-      <Helloworld text="Hello Crisptho" subtitle="testing 2nd subtitle"/>
-      <Helloworld text="Hello Stranger" subtitle="testing 3rd subtitle"/>
+    return <div>
+      {this.state.tasks.map(ele => <p key={ele.id}>
+        {ele.title} - {ele.description} - {String(ele.done)} -{ele.id}
+        </p> )}
     </div>
-  );
+  }
 }
 
 export default App;
